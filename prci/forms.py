@@ -10,17 +10,34 @@ class PublisherForm(forms.Form):
         widget=forms.TextInput(attrs={
             'class': 'form-control'
         }),
-     
         help_text="Please enter your full name (first name and last name)"
     )
     pub_address = forms.CharField(
-          max_length=50,
+        max_length=50,
         label="Publisher Address",
         required=True,
         widget=forms.TextInput(attrs={
             'class': 'form-control'
         }),
     )
-    is_published = forms.BooleanField(
-        label="Publisher"
+    publisher_founding_date = forms.DateField(
+        widget=forms.DateInput(attrs={
+            'class': 'form-control',
+            'type': 'date'
+        }),
     )
+
+
+    is_publisher = forms.BooleanField(
+        widget=forms.CheckboxInput(attrs={
+            'class': 'form-check-input'
+        }),
+        label="Publisher",
+    )
+
+    # pub_founding_date = forms.DateField(
+    #     widget=forms.DateInput(attrs={
+    #         'class': 'form-control',
+    #         'type': "date"
+    #     }),
+    # ),
