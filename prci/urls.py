@@ -8,5 +8,4 @@ urlpatterns = [
         url=staticfiles_storage.url('favicon/favicon.ico'))),
     path("", views.index, name="index"),
     path("publisher/", views.publisher_data, name="publisher"),
-
 ]

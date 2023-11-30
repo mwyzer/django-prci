@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "prci",
     "crispy_forms",
     "crispy_bootstrap5",
+    "bootstrap5",
 ]
 
 MIDDLEWARE = [
